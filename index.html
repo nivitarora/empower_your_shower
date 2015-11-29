@@ -1,0 +1,110 @@
+<!-- play() and over() functions commented out..bc sound file not loading anymore -->
+
+<!doctype html>
+<html>
+	<title>Empower Your Shower</title>
+	<head>
+		<link rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Quicksand|Lobster|Crete+Round|Oswald|Slabo+27px|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/png" href="https://openclipart.org/image/2400px/svg_to_png/213236/Shower-icon.png">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+		
+	<div class="navbar">
+ 	<ul>
+ 		<li class="navbar"> <a href="about.html"> Citations</a>
+        </li>
+        <li class="navbar"> <a href="solution.html"> The Solution</a>
+        </li>
+        <li class="navbar"> <a href="problem.html"> The Problem</a>
+        </li>       
+    </ul>
+        <div class="navhome">
+                <a href="index.html">Empower Your Shower</a>
+        </div>
+	</div>
+<br>
+<div align="center"><a href="index.html"><img src="http://4vector.com/i/free-vector-showers-clip-art_110137_Showers_clip_art_hight.png" class="x" width="200"></a></div>
+<div class="topsmall"><b> 1 in 9 people don't have access to safe water </b></div>
+<head>
+<div align="center">
+<h1><time>00:00:00</time></h1>
+<button id="start">start</button>
+<button id="stop">stop</button>
+<button id="clear">clear</button>
+<h2>gallons of water used: 0</h2>
+</div>
+<link href="http://fonts.googleapis.com/css?family=Quicksand|Lobster|Crete+Round|Oswald|Slabo+27px|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style_solution.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.ico">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+var h1 = document.getElementsByTagName('h1')[0], h2 = document.getElementsByTagName('h2')[0], gallons = 0, 
+    start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    seconds = 0, minutes = 0, hours = 0,
+    t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    gallons = (minutes + (seconds/60))*2.5;
+    gallons = gallons.toFixed(2)
+    h2.textContent = "gallons used: " + gallons;
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+
+function play() {
+  window.open("http://10.0.1.4:8080/v1/play_web_media_selected_speakers?SessionID=1001&MediaUrl=http://www.fromtexttospeech.com/texttospeech_output_files/0097656001442695804/8183405.mp3&DeviceIDList=2586126661808");
+}
+
+function over(){
+  window.open("http://10.0.1.4:8080/v1/play_web_media_selected_speakers?SessionID=1001&MediaUrl=http://www.fromtexttospeech.com/texttospeech_output_files/0539851001442691676/8182851.mp3&DeviceIDList=2586126661808");
+}
+
+/* Start button */
+start.onclick = function () {
+  timer();
+  //play();
+}
+
+/* Stop button */
+stop.onclick = function() {
+    clearTimeout(t);
+    //over();
+}
+
+/* Clear button */
+clear.onclick = function() {
+    h1.textContent = "00:00:00";
+    seconds = 0; minutes = 0; hours = 0;
+}
+</script>
+</head>
+</html>
