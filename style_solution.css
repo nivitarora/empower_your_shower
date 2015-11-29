@@ -1,0 +1,154 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Arvo|Quicksand|Lobster|Amatic+SC|Crete+Round|Pathway+Gothic+One|Oswald|Slabo+27px|Open+Sans+Condensed:300);
+
+
+.tophead{
+  font-family: 'Open Sans Condensed';
+  font-size: 30px;
+  color: #00878F;
+  margin:40px;
+  padding:0px;
+  line-height:70px;
+}
+  
+.topsmall{
+  font-family:'Open Sans Condensed';
+  font-size:50px;
+  color: #00878F;
+  margin:1px;
+  letter-spacing:-1px;
+  text-align:center;
+}
+
+.navbar {
+  color: #00878F;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:29px;
+  padding:0px;
+  margin:0px;
+}
+
+.navhome{
+  font-family: 'Lobster';
+  background:rgba(255, 255, 255,0.5);
+  font-size:40px;
+  color: #00878F;
+}
+
+li.navbar {
+  float:right;
+  padding:10px;
+  display: inline;
+}
+
+.navbar a:link, .navbar a:visited {
+  color: #00878F;
+  float:center;
+  padding: 20px;
+  text-decoration:none;
+}
+
+a:link, a:visited, a:active{
+  color: #00878F;
+  float:center;
+  padding: 20px;
+  text-decoration:none;
+}
+
+a:hover{
+  opacity: .4;
+}
+
+.navbar a:hover,.navbar a:active {
+  opacity: .4;
+  text-decoration:none;
+  font-weight:30px;
+}
+
+
+body{
+  background-image:url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/symphony.png");
+}
+
+
+.buttonlink{
+  line-height:35px;
+  padding:5px;
+  width:151px;
+  text-align:center;
+  vertical-align:middle;
+  display:inline-block;
+  font-family: 'Satisfy';
+  font-size:30px;
+  background-color:#67c3eb;
+  border-bottom:thick solid #52a7cc;
+}
+
+.buttonlink a:link, .buttonlink a:visited{
+  text-decoration:none;
+  opacity: .4;
+}
+
+.buttonlink a:hover,.buttonlink a:active{
+  opacity: .4;
+}
+
+.logo:hover{
+  opacity: .4;
+}
+
+.bodyhead{
+  font-family:'Slabo 27px';
+  font-size:50px;
+  text-indent:0px;
+}
+
+.bodyhead1 {
+  font-family: 'Open Sans Condensed';
+  color:#00878F;
+  font-size:50px;
+  font-weight:bold;
+  text-indent:0px;
+}
+
+.bodytext{
+  font-family:'Open Sans Condensed';
+  font-size:30px;
+  width: 1060px;
+  text-indent: 55px;
+  margin: auto;
+}
+
+.logo{
+  width: 230px;
+  height: 40px;
+}
+
+img{
+  margin: auto;
+  width: 20%;
+  height: 8%;
+  position: relative;
+  top: -20%;
+
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
+#chart{
+  margin:auto;
+  padding-left: 10px;
+  height: 60px;
+  width: 90px;
+}
+                  
+#largeImgPanel {
+    position: absolute;
+    visibility: hidden;
+    position: fixed;
+    bottom: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(100,100,100, 0.5);
+}                  
+
